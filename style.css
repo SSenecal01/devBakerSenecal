@@ -1,0 +1,109 @@
+@import url('https://cdn.jsdelivr.net/npm/normalize.css');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #005c5c;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#roomLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px;
+    margin: 20px;
+    grid-template-areas:
+        "livingRoom bedroom"
+        "kitchen bathroom";
+}
+
+.room {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+.room p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#livingRoom {
+    grid-area: livingRoom;
+}
+
+#bedroom {
+    grid-area: bedroom;
+    width: 400px;
+}
+
+#bathroom {
+    grid-area: bathroom;
+    width: 250px;
+}
+
+#kitchen {
+    grid-area: kitchen;
+    width: 300px;
+}
+
+.choresList {
+    list-style-type: none;
+    padding-left: 10;
+    
+}
+
+.choresList li {
+    margin: 10px 0;
+}
+
+.draggable {
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    cursor: grab;
+    position: absolute; 
+    top: 30%; 
+    right: 100px; 
+    margin-top: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#congratulations {
+    display: none;
+    margin-top: 20px;
+    margin-left: 450px;
+    font-size: 1.5rem;
+    color: green;
+    font-weight: bold;
+}
+.seal {
+  width: 50px;
+  height: 50px;
+  transform: rotate(180deg);
+}
+
+
